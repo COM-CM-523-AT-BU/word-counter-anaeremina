@@ -1,25 +1,26 @@
 // put your globals here - hint: select elements from the HTML
 
-const textArray = document.getElementById("form-label");
+const textBlock = document.getElementById("text-area");
+const textCount = document.getElementById("wordCountInput")
+
 
 // don't forget to add event listeners to teh buttons
 
-textArray.addEventListener("click", countWords);
+textBlock.addEventListener("click", countWords);
 
 function countWords() {
 // your code here
-    const words = textArray.split(' ');
+    let words = textBlock.split(' ');
     let count = 0;
-     for (var i = 0; i < words; i++) {
-      if (words[i]==" "){
-        count ++;
+     for (var i = 0; i < words.length; i++) {
+      if (words[i] != ""){
+        count +=1 ;
       }
     }
     // call printData
     printData(count);
 }
 
-  
 function findWords() {
   // put your local variable for the empty array here
   // remainder of your code follows
