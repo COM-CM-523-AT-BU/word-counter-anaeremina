@@ -28,15 +28,13 @@ function countWords() {
   }
   
 function findWords() {
+  let foundWords = [];
   // put your local variable for the empty array here
   // remainder of your code follows
-  // call printData
-  let foundWords = [];
-   // Checking if there is any object in arr which contains the key value
   text.forEach(function(item){
   foundWords.push();
   });
-  
+ // call printData
   printData(foundWords);
 }
 
