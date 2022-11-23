@@ -1,43 +1,49 @@
 // put your globals here - hint: select elements from the HTML
 
-const textBlock = document.getElementById("text-area");
-const textCount = document.getElementById("wordCountInput")
+const text = document.getElementById("text-area");
+const checkText = document.getElementById("countBtn");
+const find = document.getElementById("findWordInput");
+const checkFind = document.getElementById("wordFoundInput");
 
 
-// don't forget to add event listeners to teh buttons
+// don't forget to add event listeners to the buttons
 
-textBlock.addEventListener("click", countWords);
+text.addEventListener("click", countWords);
+find.addEventListener("click", findWords);
+
+// function that counts words
 
 function countWords() {
-// your code here
-    let words = textBlock.split(' ');
-    let count = 0;
-     for (var i = 0; i < words.length; i++) {
-      if (words[i] != ""){
-        count +=1 ;
+  // your code here
+      let conversion = text.toString();
+      let words = conversion.split(' ');
+      let count = 0;
+       for (var i = 0; i < words.length; i++) {
+        if (words[i] != ""){
+          count +=1;
+        }
       }
-    }
-    // call printData
-    printData(count);
-}
-
+      // call printData
+      printData(count);
+  }
+  
 function findWords() {
   // put your local variable for the empty array here
   // remainder of your code follows
   // call printData
-  const word = textArray.split(' ');
-  let wordRepeated = 0;
-  while (wordRepeated != -1) {
-    wordRepeated = word.indexOf(i + 1);
-    if (wordRepeated != -1) {
-      wordRepeated.add(wordRepeated);
-      wordRepeated++;
-}
-  }
-  printData(wordRepeated);
+  let foundWords = [];
+   // Checking if there is any object in arr which contains the key value
+  text.forEach(function(item){
+  foundWords.push();
+  });
+  
+  printData(foundWords);
 }
 
 // change param1 and param2 to identifiers that make sense
-function printData(countWords, findWords) {
-  // your code here... one line!
+function printData(countWords, findWords) { 
+  checkFind.textNode = message;
 }
+
+
+
