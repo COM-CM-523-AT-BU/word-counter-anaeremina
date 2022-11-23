@@ -26,14 +26,17 @@ function countWords() {
       // call printData
       printData(count);
   }
-  
+
+   // count instances of a word, use filter or forEach
 function findWords() {
   let foundWords = [];
   // put your local variable for the empty array here
   // remainder of your code follows
-  text.forEach(function(item){
-  foundWords.push();
-  });
+  for(var i = 0; i < text.length; ++i) {
+    if(!foundWords[text[i]])
+    foundWords[text[i]] = 0;
+    ++foundWords[text[i]];
+}
  // call printData
   printData(foundWords);
 }
