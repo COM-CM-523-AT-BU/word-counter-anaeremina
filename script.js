@@ -24,14 +24,16 @@ function findWords() {
   // put your local variable for the empty array here
   // remainder of your code follows
   // call printData
-  const words = textArray.split(' ');
-  let wordsRepeated = 0;
-  while (word != -1) {
-    word = graf.indexOf("e", i + 1);
-    num += 1;
-    i = wordsRepeated;
+  const word = textArray.split(' ');
+  let wordRepeated = 0;
+  while (wordRepeated != -1) {
+    wordRepeated = word.indexOf(i + 1);
+    if (wordRepeated != -1) {
+      wordRepeated.add(wordRepeated);
+      wordRepeated++;
 }
-  printData(wordsRepeated)
+  }
+  printData(wordRepeated);
 }
 
 // change param1 and param2 to identifiers that make sense
