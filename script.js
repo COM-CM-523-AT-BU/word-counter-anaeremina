@@ -28,16 +28,16 @@ function countWords() {
      // count instances of a word, use filter or forEach
   function findWords() {
     let foundWords = [];
-    // put your local variable for the empty array here
-    // remainder of your code follows
-    for(var i = 0; i < text.length; ++i) {
-      if(!foundWords[text[i]])
-      foundWords[text[i]] = 0;   
-      ++foundWords[text[i]];
+    var textArr = text.split(' ');  // assuming each word in the phrase is separated by a space
+    textArr.forEach(function(word){
+      // only continue if this word has not been seen before
+      if(!foundWords.hasOwnProperty(word)){
+        foundWords[word] = phrase.match(/word/g).length;
+      }
+   });
+  printData(foundWords, wordFind);
   }
-   // call printData
-    printData(foundWords, wordFind);
-  }
+
   
   // change param1 and param2 to identifiers that make sense
   function printData(message, destination) { 
