@@ -15,4 +15,3 @@ You are given all the necessary HTML and CSS. You will only write JS for this as
 - [javascript.info arrays](https://javascript.info/array)
 - [javascript.info forEach](https://javascript.info/array-methods#iterate-foreach)
 - [MDN Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-
