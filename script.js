@@ -3,13 +3,13 @@
 const text = document.getElementById("text-area");
 const wordCount = document.getElementById ("wordCountInput");
 const countBtn = document.getElementById ("countBtn");
-const wordFind = document.getElementById ("wordFoundInput");
-const findBtn = document.getElementById ("findWords");
+const wordFind = document.getElementById ("findWordInput");
+const findBtn = document.getElementById ("findBtn");
 
 // don't forget to add event listeners to the buttons
 
 countBtn.addEventListener ("click", countWords);
-findBtn.addEventListener ("click", countWords);
+findBtn.addEventListener ("click", findWords);
 
 // function that counts words
 function countWords() {
