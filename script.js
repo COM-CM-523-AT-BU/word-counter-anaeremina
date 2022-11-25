@@ -1,9 +1,9 @@
 // put your globals here - hint: select elements from the HTML
 
 const text = document.getElementById("text-area");
-const wordCount = document.getElementById ("wordCountInput");
+const wordCountInput = document.getElementById("wordCountInput");
 const countBtn = document.getElementById ("countBtn");
-const wordFind = document.getElementById ("findWordInput");
+const wordFind = document.querySelector ("wordFoundInput");
 const findBtn = document.getElementById ("findBtn");
 
 // don't forget to add event listeners to the buttons
@@ -13,8 +13,7 @@ findBtn.addEventListener ("click", findWords);
 
 // function that counts words
 function countWords() {
-  let conversion = text.toString();
-  let words = conversion.split(' ');
+  let words = text.value.split(' ');
         let count = 0;  
          for (var i = 0; i < words.length; i++) {
           if (words[i] != ""){
@@ -22,17 +21,17 @@ function countWords() {
           }
         }
         // call printData
-        printData(count, wordCount);
+        printData(count, wordCountInput); 
     }
   
      // count instances of a word, use filter or forEach
   function findWords() {
     let foundWords = [];
-    var textArr = text.split(' ');  // assuming each word in the phrase is separated by a space
+    var textArr = text.value.split(' ');  // assuming each word in the phrase is separated by a space
     textArr.forEach(function(word){
       // only continue if this word has not been seen before
       if(!foundWords.hasOwnProperty(word)){
-        foundWords[word] = phrase.match(/word/g).length;
+        foundWords[word] = wordFind.match(/word/g).length;
       }
    });
   printData(foundWords, wordFind);
